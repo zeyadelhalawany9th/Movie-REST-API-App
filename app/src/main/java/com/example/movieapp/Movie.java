@@ -2,13 +2,11 @@ package com.example.movieapp;
 
 public class Movie {
 
-    String name, id;
-    String imageURL;
+    String name, imageURL;
 
-    public Movie(String name, String id, String imageURL)
+    public Movie(String name, String imageURL)
     {
         this.name = name;
-        this.id = id;
         this.imageURL = imageURL;
     }
 
@@ -25,16 +23,6 @@ public class Movie {
     public void setName(String name)
     {
         this.name = name;
-    }
-
-    public String getId()
-    {
-        return id;
-    }
-
-    public void setId(String id)
-    {
-        this.id = id;
     }
 
     public String getImageURL()

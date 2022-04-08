@@ -40,7 +40,6 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position)
     {
         holder.nameTextView.setText(movieList.get(position).getName());
-        holder.IDTextView.setText(movieList.get(position).getId());
 
         Glide.with(context).load(movieList.get(position).getImageURL()).into(holder.imageView);
 
@@ -55,7 +54,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.MyVi
     public static class MyViewHolder extends RecyclerView.ViewHolder
     {
 
-        TextView nameTextView, IDTextView;
+        TextView nameTextView;
         ImageView imageView;
 
         public MyViewHolder(@NonNull View itemView)
@@ -63,7 +62,6 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.MyVi
             super(itemView);
 
             nameTextView = itemView.findViewById(R.id.nameTextView);
-            IDTextView = itemView.findViewById(R.id.IDTextView);
             imageView = itemView.findViewById(R.id.imageView1);
 
         }
